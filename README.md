@@ -1,5 +1,4 @@
 # colacco
----
 
 ## 🐧Languages and Technologies
 
@@ -94,16 +93,15 @@
     <img 
         align="left" 
         alt="GitHub Stats" 
-        height="200" 
-        style="padding-right: 10px;"
-        src="https://github-readme-stats.vercel.app/api?username=colacco&show_icons=true&theme=algolia" 
-    />
-
-    <img 
-        align="left" 
-        alt="GitHub Stats" 
         height="200"
         style="padding-right: 10px;"
         src="https://github-readme-stats.vercel.app/api/top-langs/?username=colacco&theme=algolia&layout=donut-vertical&custom_title=Technologies&langs_count=9"
     />
-<p/>
+    <img 
+        align="left" 
+        alt="GitHub Stats" 
+        height="200" 
+        style="padding-right: 10px;"
+        src="https://github-readme-stats.vercel.app/api?username=colacco&show_icons=true&theme=algolia" 
+    />
+</p>
