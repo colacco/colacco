@@ -145,30 +145,29 @@ def orbit_mark(cx: float, cy: float, t: dict, r: float = 12) -> str:
 
 
 # --------------------------------------------------------------------------- hero
-HELLO = "Hello, I'm"
+HELLO = "Olá, eu sou"
 NAME_LINES = ["Gabriel", "Colaço"]
-TAGLINE = "Software Engineer · Back-end · Cloud · DevOps"
+TAGLINE = "Software Engineer"
 SUB_LINES = [
-    "Building a multi-tenant control plane on AWS at Solutions BI,",
-    "with Terraform and Docker. Exploring RAG, local LLMs and MCP.",
+    "Desenvolvedor de software interessado em backend, arquitetura",
+    "e nos fundamentos que tornam sistemas confiáveis, simples",
+    "e capazes de evoluir",
 ]
 
 CODE: list[list[tuple[str, str]]] = [
     [("cm", "// engineer.ts")],
     [("kw", "export type "), ("ty", "Engineer"), ("pr", " = {")],
     [("in", "  role"), ("pr", ": "), ("ty", "string"), ("pr", ";")],
-    [("in", "  company"), ("pr", ": "), ("ty", "string"), ("pr", ";")],
     [("in", "  focus"), ("pr", ": "), ("ty", "string"), ("pr", "[];")],
     [("in", "  exploring"), ("pr", ": "), ("ty", "string"), ("pr", "[];")],
     [("pr", "};")],
     [],
     [("kw", "export const "), ("in", "gabriel"), ("pr", ": "), ("ty", "Engineer"), ("pr", " = {")],
     [("in", "  role"), ("pr", ": "), ("st", '"software engineer"'), ("pr", ",")],
-    [("in", "  company"), ("pr", ": "), ("st", '"Solutions BI"'), ("pr", ",")],
     [("in", "  focus"), ("pr", ": ["), ("st", '"backend"'), ("pr", ", "), ("st", '"cloud"'),
      ("pr", ", "), ("st", '"devops"'), ("pr", "],")],
-    [("in", "  exploring"), ("pr", ": ["), ("st", '"RAG"'), ("pr", ", "), ("st", '"local LLMs"'),
-     ("pr", ", "), ("st", '"MCP"'), ("pr", "],")],
+    [("in", "  exploring"), ("pr", ": ["), ("st", '"architecture"'), ("pr", ", "), ("st", '"observability"'),
+     ("pr", ", "), ("st", '"AI"'), ("pr", "],")],
     [("pr", "};")],
 ]
 
@@ -241,7 +240,7 @@ def hero(theme: str) -> str:
     dot = (f'<text x="{dot_x:.1f}" y="300" font-family="{SANS}" font-weight="600" font-size="{name_size}" '
            f'fill="{t["accent"]}" opacity="0">.<set attributeName="opacity" to="1" begin="{t_dot:.3f}s" fill="freeze"/></text>')
     sub_svg, sub_frames, _ = typed_text(
-        SUB_LINES, X, 402, 27, "inter-400", 16.5, 0, t["muted"], t_dot + 0.15, 0.016)
+        SUB_LINES, X, 392, 26, "inter-400", 16.5, 0, t["muted"], t_dot + 0.15, 0.016)
 
     def caret(frames, h, w, dy, begin, end=None):
         xs = ";".join(f"{fx + 3:.1f}" for _, fx, _ in frames)
@@ -274,7 +273,6 @@ def hero(theme: str) -> str:
             f'<g opacity="0"><set attributeName="opacity" to="1" begin="{0.5 + i * 0.11:.2f}s" fill="freeze"/>'
             f'<text x="{PX + 36}" y="{y:.1f}" text-anchor="end" font-family="{MONO}" font-size="{FS}" fill="#9298b5">{i + 1}</text>'
             f'<text x="{PX + 50}" y="{y:.1f}" font-family="{MONO}" font-size="{FS}" xml:space="preserve">{spans}</text></g>')
-    run_w = 118
     panel = f"""
 <g filter="url(#codeShadow)"><rect x="{PX}" y="{PY}" width="{PW}" height="{PH}" rx="14" fill="url(#codeBg)"/></g>
 <rect x="{PX + 0.5}" y="{PY + 0.5}" width="{PW - 1}" height="{PH - 1}" rx="13.5" fill="none" stroke="{t['code_border']}"/>
@@ -286,9 +284,6 @@ def hero(theme: str) -> str:
 <rect x="{PX + 64}" y="{PY + 14.5}" width="15" height="15" rx="3" fill="#3178c6"/>
 <text x="{PX + 71.5}" y="{PY + 25}" text-anchor="middle" font-family="{SANS}" font-weight="600" font-size="8" fill="#fff">TS</text>
 <text x="{PX + 86}" y="{PY + 26}" font-family="{MONO}" font-size="11.5" fill="#c8cbe0">engineer.ts</text>
-<rect x="{PX + PW - run_w - 14}" y="{PY + 9}" width="{run_w}" height="26" rx="6" fill="none" stroke="#c4a2ff" stroke-opacity="0.5"/>
-{glyph('play', PX + PW - run_w - 3, PY + 16.5, 11, '#c4a2ff')}
-<text x="{PX + PW - run_w + 13}" y="{PY + 26}" font-family="{MONO}" font-size="12" fill="#c4a2ff">Run profile</text>
 {''.join(code_lines)}
 """
     body = f"""
@@ -307,7 +302,7 @@ def hero(theme: str) -> str:
 {sub_svg}{sub_caret}
 {panel}
 """
-    return svg_doc(W, H, "Gabriel Colaço — Software Engineer · Back-end · Cloud · DevOps", style, body, defs)
+    return svg_doc(W, H, "Gabriel Colaço — Software Engineer", style, body, defs)
 
 
 # --------------------------------------------------------------------------- section heading
@@ -436,14 +431,13 @@ def main() -> None:
         write(f"divider-{th}.svg", divider(th))
         write(f"footer-{th}.svg", footer(th))
         for slug, (kicker, title) in {
-            "projects": ("// 01 · projects", "Featured projects"),
-            "stack": ("// 02 · stack", "My stack"),
-            "activity": ("// 03 · activity", "GitHub activity"),
+            "projects": ("// 01 · projetos", "Projetos em destaque"),
+            "stack": ("// 02 · stack", "Minha stack"),
+            "activity": ("// 03 · atividade", "Atividade no GitHub"),
         }.items():
             write(f"headings/{slug}-{th}.svg", heading(kicker, title, th))
-        write(f"buttons/portfolio-{th}.svg", button("Portfolio", "globe", True, th))
+        write(f"buttons/portfolio-{th}.svg", button("Portfólio", "globe", True, th))
         write(f"buttons/linkedin-{th}.svg", button("LinkedIn", "linkedin-logo", False, th))
-        write(f"buttons/email-{th}.svg", button("Email", "envelope-simple", False, th))
         for slug in CHIPS:
             write(f"chips/{slug}-{th}.svg", chips(slug, th))
     covers()
