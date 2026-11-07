@@ -313,6 +313,7 @@ def heading(kicker: str, title: str, theme: str) -> str:
 
 # --------------------------------------------------------------------------- stack
 STACK = [("TypeScript", "typescript.svg"), ("Python", "python.svg"), ("Node.js", "nodedotjs.svg"),
+         ("NestJS", "nestjs.svg"),
          ("FastAPI", "fastapi.svg"), ("React", "react.svg"), ("PostgreSQL", "postgresql.svg"),
          ("RabbitMQ", "rabbitmq.svg"), ("Docker", "docker.svg"), ("Terraform", "terraform.svg"),
          ("AWS", "aws.svg")]

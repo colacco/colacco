@@ -39,7 +39,7 @@
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./assets/stack-dark.svg"/>
-  <img src="./assets/stack-light.svg" width="100%" alt="TypeScript, Python, Node.js, FastAPI, React, PostgreSQL, RabbitMQ, Docker, Terraform, AWS"/>
+  <img src="./assets/stack-light.svg" width="100%" alt="TypeScript, Python, Node.js, NestJS, FastAPI, React, PostgreSQL, RabbitMQ, Docker, Terraform, AWS"/>
 </picture>
 
 <picture><source media="(prefers-color-scheme: dark)" srcset="./assets/divider-dark.svg"/><img src="./assets/divider-light.svg" width="100%" alt=""/></picture>
