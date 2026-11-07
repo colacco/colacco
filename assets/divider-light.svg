@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="32" viewBox="0 0 1200 32" role="img" aria-label="divider">
+<title>divider</title>
+<defs><style></style><linearGradient id="rule" x1="0" x2="1"><stop offset="0" stop-color="#cfd0e6" stop-opacity="0"/><stop offset="0.15" stop-color="#cfd0e6"/><stop offset="0.85" stop-color="#cfd0e6"/><stop offset="1" stop-color="#cfd0e6" stop-opacity="0"/></linearGradient></defs>
+<rect x="0" y="15.5" width="1200" height="1" fill="url(#rule)"/><circle cx="600.0" cy="16" r="4" fill="none" stroke="#5d5294" stroke-width="1.5"><animate attributeName="r" values="4;14;14" keyTimes="0;0.7;1" dur="2.4s" repeatCount="indefinite"/><animate attributeName="stroke-opacity" values="0.6;0;0" keyTimes="0;0.7;1" dur="2.4s" repeatCount="indefinite"/></circle><circle cx="600.0" cy="16" r="4" fill="#5d5294"/>
+</svg>
