@@ -294,8 +294,6 @@ def hero(theme: str) -> str:
 <rect width="{W}" height="{H}" fill="url(#grid)" mask="url(#gridMask)" opacity="0.32"/>
 </g>
 <rect x="0.5" y="0.5" width="{W - 1}" height="{H - 1}" rx="17.5" fill="none" stroke="{t['border']}"/>
-{orbit_mark(X + 13, 44, t)}
-<text x="{X + 34}" y="49" font-family="{MONO}" font-weight="700" font-size="14" fill="{t['text']}">colaco.dev</text>
 <text x="{X}" y="132" font-family="{MONO}" font-size="13" fill="{t['muted']}">{HELLO}</text>
 {name_svg}{dot}{name_caret}
 <text x="{X}" y="358" font-family="{SANS}" font-weight="600" font-size="21" letter-spacing="-0.4" fill="{t['text']}">{escape(TAGLINE)}</text>
@@ -433,7 +431,6 @@ def main() -> None:
         for slug, (kicker, title) in {
             "projects": ("// 01 · projetos", "Projetos em destaque"),
             "stack": ("// 02 · stack", "Minha stack"),
-            "activity": ("// 03 · atividade", "Atividade no GitHub"),
         }.items():
             write(f"headings/{slug}-{th}.svg", heading(kicker, title, th))
         write(f"buttons/portfolio-{th}.svg", button("Portfólio", "globe", True, th))

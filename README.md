@@ -44,17 +44,6 @@
 
 <picture><source media="(prefers-color-scheme: dark)" srcset="./assets/divider-dark.svg"/><img src="./assets/divider-light.svg" width="100%" alt=""/></picture>
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="./assets/headings/activity-dark.svg"/><img src="./assets/headings/activity-light.svg" width="100%" alt="Atividade no GitHub"/></picture>
-
-<div align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://streak-stats.demolab.com?user=colacco&background=232532&border=3F424D&stroke=3F424D&ring=B5ABFC&fire=9184D9&currStreakNum=E9E9ED&sideNums=E9E9ED&currStreakLabel=B5ABFC&sideLabels=9397AB&dates=9397AB&border_radius=16"/>
-    <img src="https://streak-stats.demolab.com?user=colacco&background=FFFFFF&border=CFD3E5&stroke=CFD3E5&ring=5D5294&fire=796CBF&currStreakNum=232532&sideNums=232532&currStreakLabel=5D5294&sideLabels=595D6C&dates=595D6C&border_radius=16" width="70%" alt="Sequência de contribuições no GitHub"/>
-  </picture>
-</div>
-
-<picture><source media="(prefers-color-scheme: dark)" srcset="./assets/divider-dark.svg"/><img src="./assets/divider-light.svg" width="100%" alt=""/></picture>
-
 <p align="center">
   <a href="https://colacco.github.io/"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/footer-dark.svg"/><img src="./assets/footer-light.svg" height="56" alt="colaco.dev — Back-end · Cloud · DevOps · IA"/></picture></a>
 </p>
